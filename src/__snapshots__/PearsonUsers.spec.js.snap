@@ -1,0 +1,404 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PearsonUsers PersonUsers should render successfully 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PearsonUsers />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="users-header"
+>
+          Pearson User Management
+</div>,
+        <div
+          className="users-list"
+>
+          <User
+                    onOpenDialog={[Function]}
+                    user={
+                              Object {
+                                        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg",
+                                        "first_name": "Eve",
+                                        "id": 4,
+                                        "last_name": "Holt",
+                                      }
+                    }
+          />
+          <User
+                    onOpenDialog={[Function]}
+                    user={
+                              Object {
+                                        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg",
+                                        "first_name": "Charles",
+                                        "id": 5,
+                                        "last_name": "Morris",
+                                      }
+                    }
+          />
+          <User
+                    onOpenDialog={[Function]}
+                    user={
+                              Object {
+                                        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg",
+                                        "first_name": "Tracey",
+                                        "id": 6,
+                                        "last_name": "Ramos",
+                                      }
+                    }
+          />
+</div>,
+        <Dialog
+          isOpen={false}
+          onCloseDialog={[Function]}
+          onDeleteUser={[Function]}
+/>,
+      ],
+      "className": "users",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Pearson User Management",
+          "className": "users-header",
+        },
+        "ref": null,
+        "rendered": "Pearson User Management",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <User
+              onOpenDialog={[Function]}
+              user={
+                            Object {
+                                          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg",
+                                          "first_name": "Eve",
+                                          "id": 4,
+                                          "last_name": "Holt",
+                                        }
+              }
+/>,
+            <User
+              onOpenDialog={[Function]}
+              user={
+                            Object {
+                                          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg",
+                                          "first_name": "Charles",
+                                          "id": 5,
+                                          "last_name": "Morris",
+                                        }
+              }
+/>,
+            <User
+              onOpenDialog={[Function]}
+              user={
+                            Object {
+                                          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg",
+                                          "first_name": "Tracey",
+                                          "id": 6,
+                                          "last_name": "Ramos",
+                                        }
+              }
+/>,
+          ],
+          "className": "users-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "4",
+            "nodeType": "class",
+            "props": Object {
+              "onOpenDialog": [Function],
+              "user": Object {
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg",
+                "first_name": "Eve",
+                "id": 4,
+                "last_name": "Holt",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "5",
+            "nodeType": "class",
+            "props": Object {
+              "onOpenDialog": [Function],
+              "user": Object {
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg",
+                "first_name": "Charles",
+                "id": 5,
+                "last_name": "Morris",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "6",
+            "nodeType": "class",
+            "props": Object {
+              "onOpenDialog": [Function],
+              "user": Object {
+                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg",
+                "first_name": "Tracey",
+                "id": 6,
+                "last_name": "Ramos",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "isOpen": false,
+          "onCloseDialog": [Function],
+          "onDeleteUser": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="users-header"
+>
+            Pearson User Management
+</div>,
+          <div
+            className="users-list"
+>
+            <User
+                        onOpenDialog={[Function]}
+                        user={
+                                    Object {
+                                                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg",
+                                                "first_name": "Eve",
+                                                "id": 4,
+                                                "last_name": "Holt",
+                                              }
+                        }
+            />
+            <User
+                        onOpenDialog={[Function]}
+                        user={
+                                    Object {
+                                                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg",
+                                                "first_name": "Charles",
+                                                "id": 5,
+                                                "last_name": "Morris",
+                                              }
+                        }
+            />
+            <User
+                        onOpenDialog={[Function]}
+                        user={
+                                    Object {
+                                                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg",
+                                                "first_name": "Tracey",
+                                                "id": 6,
+                                                "last_name": "Ramos",
+                                              }
+                        }
+            />
+</div>,
+          <Dialog
+            isOpen={false}
+            onCloseDialog={[Function]}
+            onDeleteUser={[Function]}
+/>,
+        ],
+        "className": "users",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Pearson User Management",
+            "className": "users-header",
+          },
+          "ref": null,
+          "rendered": "Pearson User Management",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <User
+                onOpenDialog={[Function]}
+                user={
+                                Object {
+                                                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg",
+                                                "first_name": "Eve",
+                                                "id": 4,
+                                                "last_name": "Holt",
+                                              }
+                }
+/>,
+              <User
+                onOpenDialog={[Function]}
+                user={
+                                Object {
+                                                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg",
+                                                "first_name": "Charles",
+                                                "id": 5,
+                                                "last_name": "Morris",
+                                              }
+                }
+/>,
+              <User
+                onOpenDialog={[Function]}
+                user={
+                                Object {
+                                                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg",
+                                                "first_name": "Tracey",
+                                                "id": 6,
+                                                "last_name": "Ramos",
+                                              }
+                }
+/>,
+            ],
+            "className": "users-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "4",
+              "nodeType": "class",
+              "props": Object {
+                "onOpenDialog": [Function],
+                "user": Object {
+                  "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg",
+                  "first_name": "Eve",
+                  "id": 4,
+                  "last_name": "Holt",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "5",
+              "nodeType": "class",
+              "props": Object {
+                "onOpenDialog": [Function],
+                "user": Object {
+                  "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg",
+                  "first_name": "Charles",
+                  "id": 5,
+                  "last_name": "Morris",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "6",
+              "nodeType": "class",
+              "props": Object {
+                "onOpenDialog": [Function],
+                "user": Object {
+                  "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg",
+                  "first_name": "Tracey",
+                  "id": 6,
+                  "last_name": "Ramos",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "isOpen": false,
+            "onCloseDialog": [Function],
+            "onDeleteUser": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
