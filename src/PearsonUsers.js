@@ -3,6 +3,7 @@ import axios from "axios"
 import { Dialog } from './Dialog';
 import { User } from './User';
 import { INITIAL_USERS, USERS_API } from './Constants';
+import { Pagination } from './Pagination';
 
 export class PearsonUsers extends Component {
   constructor(props) {
@@ -11,11 +12,14 @@ export class PearsonUsers extends Component {
       users: INITIAL_USERS,
       modalIsOpen: false,
       selectedUser: null,
+      pageNumbers: [],
+      firstTimeLoaded: true,
+      currentPageNumber: 1
     };
   }
 
   componentDidMount() {
-    this.jsonList();
+    this.jsonList(this.state.currentPageNumber);
   }
 
   removeDuplicateUsers(usersToFilter) {
@@ -27,14 +31,26 @@ export class PearsonUsers extends Component {
     return filteredData;
   }
 
-  jsonList() {
-    axios.get(USERS_API)
+  jsonList(pagenumber) {
+    axios.get(USERS_API,{
+      params: {
+        page: pagenumber,
+        per_page: 10
+      }
+    })
     .then((response)=> {
       this.setState((prevState) => {
-        const userdata = prevState.users.concat(response.data.data); 
-          return {
-            users: this.removeDuplicateUsers(userdata),
-          };
+        let userdata;
+        userdata = this.state.firstTimeLoaded ? prevState.users.concat(response.data.data) : response.data.data ;
+        const pageNumbers = []; 
+        for(let i=1 ; i <= response.data.total_pages ; i++){
+          pageNumbers.push(i)
+        }
+        return {
+          users: this.removeDuplicateUsers(userdata),
+          pageNumbers: pageNumbers
+
+        };
       });
     })
   }
@@ -61,6 +77,13 @@ export class PearsonUsers extends Component {
     this.closeDialog();
   }
 
+  handlePagination(pagenumber) {
+    this.setState({
+      firstTimeLoaded: false,
+    })
+    this.jsonList(pagenumber);
+  }
+
   render() {
     return (
       <div className="users">
@@ -73,6 +96,19 @@ export class PearsonUsers extends Component {
                   key={user.id}
                   user={user}
                   onOpenDialog={this.openDialog.bind(this, user)}
+                />
+              )
+            })
+          }
+        </div>
+        <div className="users-pagination">
+          {
+            this.state.pageNumbers.map((number) => {
+              return (
+                <Pagination 
+                  key={number} 
+                  id={number} 
+                  handlePagination ={this.handlePagination.bind(this,number)}
                 />
               )
             })

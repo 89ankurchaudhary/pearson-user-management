@@ -35,4 +35,4 @@ export const INITIAL_USERS = [
     }
   ];
 
-  export const USERS_API = 'https://reqres.in/api/users?page=1&per_page=10';
+  export const USERS_API = 'https://reqres.in/api/users';

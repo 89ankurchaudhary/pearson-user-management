@@ -59,6 +59,11 @@ ShallowWrapper {
                     }
           />
 </div>,
+        <div
+          className="users-pagination"
+>
+          
+</div>,
         <Dialog
           isOpen={false}
           onCloseDialog={[Function]}
@@ -182,6 +187,18 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "users-pagination",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "isOpen": false,
@@ -243,6 +260,11 @@ ShallowWrapper {
                                               }
                         }
             />
+</div>,
+          <div
+            className="users-pagination"
+>
+            
 </div>,
           <Dialog
             isOpen={false}
@@ -362,6 +384,18 @@ ShallowWrapper {
               "type": [Function],
             },
           ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "users-pagination",
+          },
+          "ref": null,
+          "rendered": Array [],
           "type": "div",
         },
         Object {
