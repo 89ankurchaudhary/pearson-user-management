@@ -1,0 +1,73 @@
+
+//Conditions - Neither of the first two letters can be D, F, I, Q, U or V.
+//The second letter also cannot be O. 
+//The prefixes BG, GB, NK, KN, TN, NT and ZZ are not allocated
+
+function generateStartingCharacters() {
+  var text = "";
+  var possible1 = "ABCEGHJKLMNOPRSTWXYZ";
+  var possible2 = "ABCEGHJKLMNPRSTWXYZ";
+  let firstCharacter =possible1.charAt(Math.floor(Math.random() * possible1.length));
+  let secondCharacter =possible2.charAt(Math.floor(Math.random() * possible2.length));
+  text = firstCharacter + secondCharacter
+  if(text == "BG" || text == "GB" || text == "NK" || text == "KN" || text == "TN" || text == "NT" || text == "ZZ") {
+		generateStartingCharacters()		
+  }
+	return text;
+}
+
+//The suffix letter is either A, B, C, or D
+
+function generateLastCharacter() {
+  var possible = "ABCD";
+  return possible.charAt(Math.floor(Math.random() * possible.length));
+}
+
+//After the two prefix letters, the six digits are issued sequentially from 00 00 00 to 99 99 99.
+//The last two digits determine the day of the week on which various social security benefits are payable 
+//00 to 19 for Monday, 20 to 39 for Tuesday, 40 to 59 for Wednesday, 60 to 79 for Thursday and 80 to 99 for Friday.
+
+// We dont have these date so we have taken system date and geneated todays Day eg - if today is wednesday then a random number from 40 to 59 will //be generated 
+//TODO : We are not aware of what will happen on saturday/sunday hence i have generated numbers from 10-99 for that days
+
+
+
+function getLastTwoDigits() {
+	let randomLastTwoDigit,
+		date = new Date().getDay().toString();
+		
+	switch(date) {
+		case '1' :
+			let oneDigitRandomNumber = Math.floor(Math.random() * 10).toString();
+			oneDigitRandomNumber.length == 1  ? randomLastTwoDigit = 0 + oneDigitRandomNumber : randomLastTwoDigit = Math.floor(Math.random() * (19+1 - 10) + 10).toString();
+			break;
+			
+		case '2' :
+			randomLastTwoDigit = Math.floor(Math.random() * (39+1 - 20) + 20).toString();
+			break;
+			
+		case '3' :
+			randomLastTwoDigit = Math.floor(Math.random() * (59+1 - 40) + 40).toString();
+			break;
+			
+		case '4' :
+			randomLastTwoDigit = Math.floor(Math.random() * (79+1 - 60) + 60).toString();
+			break;
+			
+		case '5' :
+			randomLastTwoDigit = Math.floor(Math.random() * (99+1 - 80) + 80).toString();
+			break;
+			
+		default :
+			randomLastTwoDigit = Math.floor(Math.random() * (99+1 - 10) + 10).toString();
+			break;
+	}
+	return randomLastTwoDigit;
+}
+
+
+function generateInsuranceNumber() {
+	return (generateStartingCharacters() + (Math.floor(Math.random() * 10000) + 10000).toString().substring(1) + getLastTwoDigits() + generateLastCharacter())
+}
+
+generateInsuranceNumber()
